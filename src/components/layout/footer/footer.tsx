@@ -1,19 +1,33 @@
-import React from "react";
+import React, {useState} from "react";
 import s from './footer.module.css'
 import {settings} from "../../company/companyPage";
 
 export const Footer = () => {
+
+    const [shakeCompany, setShakeCompany] = useState(false);
+    const [shakeWork, setShakeWork] = useState(false);
+    const [shakeCareers, setShakeCareers] = useState(false);
+    const [shakeContact, setShakeContact] = useState(false);
+
+    const animate = (set:any) => {
+
+        set(true);
+        setTimeout(() => set(false), 1000);
+    }
+
     return <div className={s.footer}>
         <div {...settings}  className={s.footer_logo}>
             <img alt={"logo-simple.svg"}
                  src="https://assets.website-files.com/5d2593d4e31f05ed4edd50f5/5dbc29afc0a72841e8d7e045_temy-logo-simple.svg"/>
         </div>
         <div {...settings} className={s.foot_bar}>
+            <div className={s.footer_navbar}>
             <div className={s.links_wrapper}>
-                <a href={"#"}>Company</a>
-                <a href={"#"}>Work</a>
-                <a href={"#"}>Contact us</a>
-                <a href={"#"}>Careers</a>
+                <a onClick = {() => animate(setShakeCompany)} className = {[shakeCompany && "shake"].join(" ")} href={"/"}>Company</a>
+                <a onClick = {() => animate(setShakeWork)} className = {[shakeWork && "shake"].join(" ")} href={"/"}>Work</a>
+                <a onClick = {() => animate(setShakeCareers)} className = {[shakeCareers && "shake"].join(" ")} href={"/"}>Careers</a>
+                <a onClick = {() => animate(setShakeContact)} className = {[shakeContact && "shake"].join(" ")} href={"/"}>Contact us</a>
+            </div>
             </div>
         </div>
         <div className={s.widgets}>

@@ -13,7 +13,7 @@ body{
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 0 10%;
+    padding: 0 4%;
     text-align: left;
     background: white;
 }
@@ -29,7 +29,7 @@ body{
 
 .logo_img{
     filter: contrast(100%);
-    margin-top: 5px;
+
 
 }
 .logo_img:hover{
@@ -75,6 +75,10 @@ nav ul{
 }
 nav ul li{
     list-style: none;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
 }
 .link{
     position: relative;
@@ -91,7 +95,9 @@ nav ul li{
     text-transform: uppercase;
     transition: all .3s;
     cursor: pointer;
-    border-radius: 5px;}
+    border-radius: 5px;
+
+}
 
 .link:hover {
     text-decoration: none;
@@ -115,6 +121,7 @@ nav ul li{
 @media (max-width:991px){
     .logo_img{
         max-width: 80%;
+        margin-top: 5px;
     }
 
     @keyframes shake {

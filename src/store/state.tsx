@@ -49,6 +49,7 @@ export const clients_representatives = [
         name: 'Shlomo Wygodny,',
         position: 'CTO',
         logo: 'https://assets.website-files.com/5d70dcdbc8ca5db9a742e3ee/5dbc14e8c0a7281f0ad74fc3_logo_ext_black-white.png',
+        youtube: 'https://youtu.be/JRK6vk8inSE',
         quote: 'Responsive and efficient, Temy quickly implemented all requests for changes that came up during peer review discussions. Their comprehensive experience, coupled with their proactive approach, made for a fruitful partnership.'
     },
     {
@@ -56,6 +57,7 @@ export const clients_representatives = [
         name: 'Waldo Vanderhaeghen,',
         position: 'MOBILE PRODUCT MANAGER',
         logo: clients[3].url,
+        youtube: 'https://youtu.be/IBejiKdbUDs',
         quote: 'Our cooperation was successful because of the balance between quick turnaround and ensuring high quality in every feature. Temy developers were fully integrated with the Lesara team. It enabled flexibility and clear communication.'
     },
 ]

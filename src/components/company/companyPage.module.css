@@ -115,7 +115,7 @@
 .slide5 {
     display: inline-block;
     vertical-align: top;
-    width: 100vw;
+    width: 90vw;
     position: relative;
     height: 100%;
     padding: 5% 0;
@@ -124,6 +124,7 @@
 }
 
 @media (max-width: 991px) {
+    .slide5 {width: 100vw}
     .heading_2_wrapper {
         border-right: none;
     }
@@ -157,6 +158,7 @@
 }
 
 @media screen and (max-width: 767px) {
+
     .grad_wrapper {
         height: 65px;
     }
@@ -173,6 +175,16 @@
     }
 }
 @media (max-width: 479px) {
+    .heading_container{
+        margin-top: 10%;
+        margin-bottom: 10%;
+        align-self: flex-start;
+    }
+
+    .section_container{
+        margin-bottom: 10px;
+    }
+
     .main_heading_1 {
         font-size: 34px;
         line-height: 40px;
