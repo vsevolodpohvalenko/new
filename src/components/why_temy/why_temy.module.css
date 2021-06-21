@@ -1,0 +1,120 @@
+/*Why temy part*/
+
+.rel_subtitle {
+    grid-area: r_subtitle
+}
+
+.rel_title {
+    grid-area: r_title
+}
+
+.rel_items {
+    grid-area: r_items;
+    min-height: 0;
+    margin-top: 5%;
+    display: grid;
+    grid-column-gap: 60px;
+    grid-row-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.rel_items_container {
+    display: grid;
+    grid-area: r_items_cont;
+    min-height: 0;
+    align-content: stretch;
+    grid-template-columns: 0.5fr 3fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+            ". r_items "
+}
+
+.rel_item_img {
+    position: static;
+    left: 0;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    display: block;
+    overflow: visible;
+    width: 60px;
+    height: 100%;
+    max-width: none;
+    float: left;
+}
+
+.rel_item_title {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    padding: 10px 0 10px 10px;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 200;
+    text-align: start;
+    color: #333;
+}
+
+.rel_wrapper {
+    display: flex;
+    width: 240px;
+    height: 100px;
+    padding: 10px 0 10px 10px;
+    justify-content: flex-start;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+}
+
+.rel_wrapper img {
+    width: 60px;
+    height: 100%
+}
+
+.why_temy_section {
+    display: grid;
+    grid-column-gap: 30px;
+    grid-template-columns: 0.5fr 3fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "r_subtitle r_title"
+            ". r_title"
+            "r_items_cont r_items_cont";
+}
+
+@media (max-width: 991px) {
+    .why_temy_section {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "r_subtitle . "
+            "r_title r_title"
+            "r_items_cont r_items_cont";
+    }
+
+    .rel_items_container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "r_items "
+    }
+
+    .rel_items {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .rel_items {
+        grid-template-columns: 1fr;
+    }
+
+    .rel_wrapper {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+}

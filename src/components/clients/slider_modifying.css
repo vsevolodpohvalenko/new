@@ -1,0 +1,42 @@
+.carousel-prev:before{
+    background-image: url('http://www.faidamarketlink.or.tz/faidamalimis/plugins/ionicons-2.0.1/png/512/ios7-arrow-left.png');
+    width: 60px;
+    height: 60px;
+    background-size: 60px 60px;
+    filter: opacity(0.2) drop-shadow(0 0 0 #2d2d2d)
+
+}
+
+.carousel-next:before{
+    background-image: url("https://icons-for-free.com/iconfiles/png/512/arrow+right+chevron+chevronright+right+right+icon+icon-1320185732203239715.png");
+    width: 60px;
+    height: 60px;
+    background-size: 60px 60px;
+    filter: opacity(0.2) drop-shadow(0 0 0 #2d2d2d)
+}
+
+.carousel-dots li{
+    margin: 0;
+    width: 15px;
+    height: 15px;
+}
+.carousel-dots li.carousel-dots-active button:before{
+    opacity: 1!important;
+}
+
+
+
+@media (max-width: 991px){
+    .carousel-next:before, .carousel-prev:before{
+        display: none
+    }
+
+}
+
+@media screen and (max-width: 767px){
+    .slider_container{
+        width: 100%;
+        padding: 20px 20px 45px;
+    }
+}
+

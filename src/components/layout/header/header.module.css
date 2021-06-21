@@ -1,0 +1,182 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Sans',sans-serif;
+    overflow-x: hidden;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+}
+.header{
+    z-index: 2;
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0 10%;
+    text-align: left;
+    background: white;
+}
+
+.logo{
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+    text-align: center;
+    box-sizing: border-box;
+    float: left;
+}
+
+.logo_img{
+    filter: contrast(100%);
+    margin-top: 5px;
+
+}
+.logo_img:hover{
+    filter: contrast(200%);
+    transition: 2s;
+}
+.menu_toggle{
+    display: none
+}
+.header div a.logo:hover,
+.header div a.logo{
+    text-decoration: none;
+    color: black;
+}
+
+.shake{
+    animation: shake 1s;
+}
+
+@keyframes shake {
+    0%  { transform:  scale(1)}
+    20% { transform:  scale(0.7)}
+    40% { transform:  scale(0.1)}
+    60% { transform:  scale(0.9)}
+    80% { transform:  scale(1.2)}
+    100%{ transform:  scale(1)}
+}
+
+nav ul {
+    float: right;
+    margin-left: 0;
+    padding-left: 0;
+    clear: none;
+    position: relative;
+}
+.clearfix {
+    clear: both;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+}
+.link{
+    position: relative;
+    display: inline-block;
+    background: white;
+    vertical-align: top;
+    text-decoration: none;
+    color: #222;
+    padding: 20px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'IBM Plex Sans',sans-serif;
+    text-transform: uppercase;
+    transition: all .3s;
+    cursor: pointer;
+    border-radius: 5px;}
+
+.link:hover {
+    text-decoration: none;
+    transition: 0.5s;
+    color: rgba(195,59,61,255)
+}
+
+.contact{
+    border: 1px black solid;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    margin-top: 8px;
+    padding: 9px 15px;
+    border-radius: 20px;
+    font-family: 'IBM Plex Sans',sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+@media (max-width:991px){
+    .logo_img{
+        max-width: 80%;
+    }
+
+    @keyframes shake {
+        0%  { transform: translateX(10%)}
+        30% { transform:  translateX(50%)}
+        60% { transform:  translateX(-20%)}
+        80% { transform:  translateX(20%)}
+        100%{ transform:  translateX(5%)}
+    }
+
+    .header{
+        height: 60px;
+        padding: 0;
+    }
+    .menu_toggle{
+        display: block;
+        /*background: url('https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/hamburger-menu.png');*/
+        /*object-fit: cover;*/
+        /*background-size: 25px 25px;*/
+        font-size: 25px;
+        width: 25px;
+        height: 25px;
+        margin: 15px 30px;
+        float: right;
+        cursor: pointer;
+    }
+    nav{
+        -webkit-transition: all .5s ease-out;
+        transition: all 0s ease-out;
+        transform: rotateX(90deg);
+        /*display: none;*/
+        transform-origin: top;
+        margin-top: 45px;
+    }
+    nav.ul {
+        height: 0;
+    }
+    nav.active{
+        /*display: block;*/
+        transition: all 1s ease-out;
+        transform: rotateX(0deg);
+        transform-origin: top;
+        margin: 0;
+        background-color: white;
+
+    }
+    nav.active ul{
+        width: 100vw;
+        display: block;
+
+        height: 250px;
+        background-color: white;
+        box-shadow: 0 15px 10px -15px #111;
+    }
+    nav.active ul li{
+        margin: 0;
+        padding-left: 15px;
+    }
+    .contact{
+        border: none;
+        background-color: white;
+
+    }
+
+}

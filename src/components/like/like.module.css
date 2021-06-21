@@ -1,0 +1,42 @@
+.like_section{
+    display: block;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.left{
+    grid-area: left;
+}
+
+.right{
+    grid-area: right;
+    text-align: left;
+}
+
+.like_grid{
+    display: grid;
+    min-height: 0;
+    align-content: stretch;
+    grid-template-columns: 0.5fr 3fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "left right"
+            ". right"
+}
+
+@media screen and (max-width: 991px){
+    .like_grid{
+        display: grid;
+        min-height: 0;
+        align-content: stretch;
+        grid-column-gap: 30px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "left ."
+            "right right"
+    }
+}
